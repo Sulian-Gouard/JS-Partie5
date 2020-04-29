@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <title>Exercice 2</title>
+</head>
+
+
+<body>
+    <div class="container-md m-5 p-3">
+        <form>
+            <div class="form-group">
+                <label for="pwd1">mot de passe</label>
+                <input type="password" class="form-control" id="pwd1" placeholder="mot de passe">
+            </div>
+            <div class="form-group">
+                <label for="pwd2">confirmation de mot de passe</label>
+                <input type="password" class="form-control" id="pwd2" placeholder="mot de passe">
+            </div>
+            <button type="button" onclick="testpw()" class="btn btn-primary">soumettre</button>
+        </form>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+
+    <script>
+        function testpw() {
+
+            let idpwd1 = document.getElementById("pwd1");
+            let idpwd2 = document.getElementById("pwd2");
+
+            if (idpwd1.value == idpwd2.value) {
+                console.log('pwd bon');
+                idpwd1.classList.remove("pwt");
+                idpwd2.classList.remove("pwt");
+                idpwd1.classList.add("pwf");
+                idpwd2.classList.add("pwf");
+                
+            } 
+            
+            else { 
+            console.log('pwd erroné')
+            idpwd1.classList.remove("pwf");
+            idpwd2.classList.remove("pwf");
+            idpwd1.classList.add("pwt");
+            idpwd2.classList.add("pwt");
+            
+            window.alert("Mots de passe différents");
+        }
+    }
+    </script>
+
+
+</body>
+
+</html>

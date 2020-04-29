@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Exercice 5</title>
+</head>
+
+<body>
+
+    <div>
+        <p id="textcolor">
+            Python est un langage de programmation interprété, multi-paradigme et multiplateformes. Il favorise la
+            programmation impérative structurée, fonctionnelle et orientée objet. Il est doté d'un typage dynamique
+            fort, d'une gestion automatique de la mémoire par ramasse-miettes et d'un système de gestion d'exceptions ;
+            il est ainsi similaire à Perl, Ruby, Scheme, Smalltalk et Tcl. Le langage Python est placé sous une licence
+            libre proche de la licence BSD et fonctionne sur la plupart des plates-formes informatiques, des smartphones
+            aux ordinateurs centraux, de Windows à Unix avec notamment GNU/Linux en passant par macOS, ou encore
+            Android, iOS, et peut aussi être traduit en Java ou .NET. Il est conçu pour optimiser la productivité des
+            programmeurs en offrant des outils de haut niveau et une syntaxe simple à utiliser.
+            Il est également apprécié par certains pédagogues qui y trouvent un langage où la syntaxe, clairement
+            séparée des mécanismes de bas niveau, permet une initiation aisée aux concepts de base de la programmation.
+        </p>
+    </div>
+
+    <button type="button" id="textPink">Rose</button>
+    <button type="button" id="textBlue">Bleu</button>
+    <button type="button" id="textPurple">Violet</button>
+    <button type="button" id="textBold">Gras</button>
+    <button type="button" id="textIta">Italique</button>
+
+    <script>
+        let idColor = document.getElementById("textcolor");
+        let idPink = document.getElementById("textPink");
+        let idBlue = document.getElementById("textBlue");
+        let idPurple = document.getElementById("textPurple");
+        let idBold = document.getElementById("textBold");
+        let idIta = document.getElementById("textIta");
+
+        textPink.addEventListener("click", changeColPink);
+        textBlue.addEventListener("click", changeColBlue);
+        textPurple.addEventListener("click", changeColPurple);
+        textBold.addEventListener("click", changeBold);
+        textIta.addEventListener("click", changeIta);
+
+
+
+        function changeColPink() {
+
+            if (idColor.style.color == "pink") {
+                idColor.style.color = "black";
+            } else {
+                idColor.style.color = "pink";
+            }
+
+        }
+
+        function changeColBlue() {
+            if (idColor.style.color == "blue") {
+                idColor.style.color = "black";
+            } else {
+                idColor.style.color = "blue";
+            }
+        }
+
+        function changeColPurple() {
+            if (idColor.style.color == "purple") {
+                idColor.style.color = "black";
+            } else {
+                idColor.style.color = "purple";
+            }
+        }
+
+        function changeBold() {
+            if (idColor.style.fontWeight == "bold") {
+                idColor.style.fontWeight = "";
+            } else {
+                idColor.style.fontWeight = "bold";
+            }
+        }
+
+        function changeIta() {
+            if (idColor.style.fontStyle == "italic") {
+                idColor.style.fontStyle = "";
+            } else {
+                idColor.style.fontStyle = "italic";
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>

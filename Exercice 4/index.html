@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 4</title>
+
+
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <h1>Exercice 4</h1>
+    <p>Créer un fichier html et y ajouter une image. Au clic sur l'image changer sa source, au survol, l'agrandir.</p>
+
+    <div>
+        <img src="/img/quezac.jpg" alt="image eau minérale quezac" title="eau minérale quezac" id="imgQuezac">
+    </div>
+
+
+
+
+    <script>
+        let idQuezac = document.getElementById("imgQuezac");
+
+        idQuezac.addEventListener("click", changeImg);
+        idQuezac.addEventListener("mouseover", zoomImg);
+        idQuezac.addEventListener("mouseout", zoomOutImg);
+
+        function zoomImg() {
+            idQuezac.style.width = "50em";
+            idQuezac.style.height = "50em";
+
+        }
+
+        function zoomOutImg() {
+            idQuezac.style.width = "";
+            idQuezac.style.height = "";
+
+        }
+
+        function changeImg() {
+            if (idQuezac.src.match("quezac")) {
+                idQuezac.src = "img/cristaline.jpg";
+            } else {
+                idQuezac.src = "img/quezac.jpg";
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>
